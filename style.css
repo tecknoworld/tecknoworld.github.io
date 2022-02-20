@@ -11,7 +11,7 @@
       rgba(14, 14, 15, 0.838),
       rgba(4, 9, 30, 0.7)
     ),
-    url(images/herd.jpg);
+    url(IMAGES/herd.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
