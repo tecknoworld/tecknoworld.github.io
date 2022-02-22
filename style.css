@@ -202,7 +202,7 @@ h3 {
 }
 
 @media (max-width: 700px) {
-  .layer img {
+  .livestock-col img {
     margin-left: 5px;
     border-radius: 5%;
   }
