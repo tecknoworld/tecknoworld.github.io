@@ -14,7 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -66,25 +66,7 @@
                         MySQL and .NET framework, I have worked in multiple projects throughout my course, including
                         websites for individuals and participated in hackathons, my hobbies outside of IT are -
                         videography, chess and learning new things </p>
-                    <a href="cv,.pdf">Download CV<span></span></a>
-
-                    <script>
-                        let button = document.querySelector("column right")
-                        button.addEventListener("click", () => {
-                            const span = document.querySelector("a span");
-                            button.style.paddingRight = '10px';
-                            span.style.visibility = "visible";
-                            setTimeout(() => {
-                                span.style.visibility = "hidden";
-                                button.style.transition = ".3s ease-in-out";
-                                button.style.paddingRight = "0px";
-
-                            }, 3000)
-
-                        })
-                    </script>
-
-
+                    <a href="cv.pdf">Download CV<span></span></a>
 
                 </div>
             </div>
@@ -258,22 +240,26 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form action="#">
+                    <form id="myForm">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" placeholder="Name" name="name" required>
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" placeholder="Email" name="" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Subject" required>
+                            <input type="text" placeholder="Subject" name="sub_name" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                            <textarea cols="30" rows="10" placeholder="Message.." name="message" required></textarea>
+                        </div>
+                        <div>
+                            <p id="contact-message"></p>
                         </div>
                         <div class="button-area">
+                            <!-- Call the sendEmail function on button click -->
                             <button type="submit">Send message</button>
                         </div>
                     </form>
@@ -284,11 +270,14 @@
 
     <!-- footer section start -->
     <footer>
-        <span>Created By <a href="https://github.com/search?q=glanzito">ofentselebogo</a> | <span
+        <span>Created By <a href="https://github.com/search?q=tecknoworld">ofentselebogo</a> | <span
                 class="far fa-copyright"></span> 2021 All rights reserved.</span>
     </footer>
 
     <script src="script.js"></script>
+
+
+
 </body>
 
 </html>
